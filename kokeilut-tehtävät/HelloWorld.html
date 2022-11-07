@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kokeilusivu</title>
+</head>
+<body>
+
+<h1>Sivun otsikko</h1>
+
+<p id="target"></p>
+
+<script>
+  'use strict'
+
+  let kelvin, celsius;
+  const muuntoarvo = -273.15
+
+  kelvin = parseFloat(prompt("Anna lämpötila Kelvin-asteina:"));
+  celsius = kelvin + muuntoarvo;
+
+  console.log(kelvin + " Kelvin-astetta on " + celsius + " Celsius-astetta.");
+
+  let oikeaLuku = Math.floor(Math.random()*10)+1;
+  // console.log(oikeaLuku);
+
+</script>
+
+</body>
+</html>
