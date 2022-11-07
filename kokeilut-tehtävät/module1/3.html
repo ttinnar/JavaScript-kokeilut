@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tehtävä3</title>
+</head>
+<body>
+
+<h2>tehtävä 3</h2>
+<p id="target"></p>
+
+<script>
+  'use strict'
+  const luku1 = parseInt(prompt('Anna kokonaisluku'));
+  const luku2 = parseInt(prompt('Anna kokonaisluku'));
+  const luku3 = parseInt(prompt('Anna kokonaisluku'));
+
+  const Summa = luku1 + luku2 + luku3
+  const Tulo = luku1 * luku2 * luku3
+  const KA = (luku1 + luku2 + luku3) / 3
+
+  document.querySelector('#target').innerHTML = "Summa on " + Summa + " Tulo on " + Tulo + " Keskiarvo on " + KA
+
+
+</script>
+
+</body>
+</html>
