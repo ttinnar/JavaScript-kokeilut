@@ -13,18 +13,38 @@
 <script>
   'use strict'
 
-  let kelvin, celsius;
-  const muuntoarvo = -273.15
+  let lounaanHinta;
 
-  kelvin = parseFloat(prompt("Anna lämpötila Kelvin-asteina:"));
-  celsius = kelvin + muuntoarvo;
+  const vastaus = prompt("Oletko (O)piskelija, (H)enkilökunnan jäsen vai (M)uu asiakas");
+  const asiakastyyppi = vastaus.toLowerCase();
 
-  console.log(kelvin + " Kelvin-astetta on " + celsius + " Celsius-astetta.");
+  switch (asiakastyyppi) {
+    case 'o':
+      lounaanHinta = 3.20;
+      break;
+    case 'h':
+      lounaanHinta = 6.10;
+      break;
+    case 'm':
+      lounaanHinta = 8.95;
+      break;
+    default:
+      alert("Syötit virheellisen asiakastyypin. Käynnistä ohjelma uudelleen.");
+  }
 
-  let oikeaLuku = Math.floor(Math.random()*10)+1;
-  // console.log(oikeaLuku);
+  if (lounaanHinta>=0) {
+    console.log(`Lounaasi maksaa ${lounaanHinta} euroa`);
+
+
+  }
 
 </script>
 
 </body>
 </html>
+<!--    // console ctrl shift J-->
+
+<!--// (alkutoimet, toistoehto, lopputoimet)-->
+<!--//     for (let i=1; i<=10; i++) {-->
+<!--//       console.log(i);-->
+<!--//     }-->
