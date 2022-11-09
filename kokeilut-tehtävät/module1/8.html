@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tehtävä8</title>
+</head>
+<body>
+
+<h2>tehtävä 7</h2>
+<ul id="result"></ul>
+
+<script>
+  'use strict'
+  let start = prompt('Start year: ');
+  let end = prompt('End year: ');
+  const list = document.getElementById('result')
+
+  if(start > end) [start, end] = [end, start]
+
+  for(let i = start; i <= end; i++) {
+    if (i%4===0 && i%100!==0 || i%100===0 && i%400===0) {
+      let node = document.createElement('LI')
+      let val = list.appendChild(node)
+      node.innerHTML = i
+    }
+  }
+
+
+</script>
+
+
+</body>
+</html>
