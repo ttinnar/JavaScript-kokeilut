@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tehtävä6</title>
+</head>
+<body>
+
+<h2>tehtävä 6</h2>
+<p id="target"></p>
+
+<script>
+  'use strict';
+  const answer = confirm('Pitäisikö laskea neliöjuuri?');
+  if (answer === true) {
+    let luku = parseInt(prompt('Syötä numero:'));
+    let sqrRoot = parseInt(Math.sqrt(luku));
+    document.querySelector('#target').innerHTML = 'Luvun neliöjuuri on ' + sqrRoot
+  if (luku < 0) {
+    document.querySelector('#target').innerHTML = 'Negatiivisen luvun neliöjuurta ei ole määritelty'
+  }}
+  if (answer === false) {
+  document.querySelector('#target').innerHTML = 'Neliöjuurta ei lasketa'
+  }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
