@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tehtävä9</title>
+</head>
+<body>
+
+<h2>tehtävä 8</h2>
+<ul id="target"></ul>
+
+<script>
+  'use strict'
+  let integer = parseInt(prompt('Give an integer: '));
+  document.querySelector('#target').innerHTML = integer
+  for(let i=2; i<integer; i++){
+            if(integer%i==0){
+                integer = true
+                break
+            }
+            integer = false
+        }
+    document.querySelector('#target').innerHTML += integer ? ' Number is not a prime number.' : ' Number is a prime number'
+
+
+
+
+</script>
+
+</body>
+</html>
