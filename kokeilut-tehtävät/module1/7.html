@@ -6,5 +6,20 @@
 </head>
 <body>
 
+<h2>tehtävä 7</h2>
+<p id="target"></p>
+
+<script>
+  'use strict'
+  const nopat = prompt('Number of dices: ');
+
+  let dice = (Math.floor((Math.random() * 6) + 1));
+  let sum = 0;
+  for (let i = 1; i <= nopat; i++) {
+    sum += dice;
+    }
+  document.querySelector('#target').innerHTML = 'The sum of '+ nopat + ' dices is '+ sum
+</script>
+
 </body>
 </html>
