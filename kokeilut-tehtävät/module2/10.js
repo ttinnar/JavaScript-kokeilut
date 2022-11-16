@@ -13,6 +13,11 @@ let candList=[]
             })
         }
 //Kysyy monta äänestäjää on
+// silmukka (äänestäjien lkm)
+// // Kysyy ketä jokainen äänestää
+// // toinen silmukka (ehdokkaat)
+// // jos (ääni = ehdokas.name)
+// // kasvata ehdokas.vote yhdellä
 const voters=prompt('Number of voters')
         let empty=0
         let cand
@@ -22,11 +27,7 @@ const voters=prompt('Number of voters')
             cand=candList.find(a=>a.name==candVote)
             typeof(cand)==='undefined'?empty++:cand.votes++
         }
-// silmukka (äänestäjien lkm)
-// Kysyy ketä jokainen äänestää
-// toinen silmukka (ehdokkaat)
-// jos (ääni = ehdokas.name)
-// kasvata ehdokas.vote yhdellä
+
 candList.sort((a,b)=>b.votes-a.votes)
         let results=`The winner is ${candList[0].name} with ${candList[0].votes} votes\nResults:\n`
         for(let i of candList)results += `${i.name}: ${i.votes}\n`
