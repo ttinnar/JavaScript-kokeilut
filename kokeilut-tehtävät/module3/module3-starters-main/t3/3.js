@@ -1,12 +1,9 @@
 'use strict';
 
-const div = document.querySelector('#target');
 const names = ['John', 'Paul', 'Jones'];
 
-for (let name in names) {
-
+for(let i of names){
+    const node = document.createElement('LI')
+    document.getElementById('target').appendChild(node)
+    node.innerHTML = i
 }
-
-
-
-div.innerHTML = names;
