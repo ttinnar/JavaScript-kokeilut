@@ -1,5 +1,6 @@
 'use strict'
 
 // 1. valitse elementti / elementit
-// 2. haetaan kentistä arvot
-// 3. kun nappia klikataan, tee haluttu laskutoimitus
+// 3. kun nappia klikataan, hae arvot ja tee haluttu laskutoimitus
+
+// ---split merkkijono talukukoksi

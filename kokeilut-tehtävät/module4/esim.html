@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Esimerkki1</title>
+</head>
+<body>
+  <p>Kolme päivän parasta vitsiä:</p>
+
+  <ol>
+    <li id="vitsi1">Tähän tulee ensimmäinen vitsi</li>
+    <li id="vitsi2">Tähän tulee toinen vitsi</li>
+    <li id="vitsi3">Tähän tulee kolmas vitsi</li>
+  </ol>
+
+
+<script>
+    'use strict'
+
+    async function hae_vitsi(vitsinumero){
+      let uri = "https://api.chucknorris.io/jokes/random";
+      let response = await fetch(uri);
+      let json = await response.json();
+      let teksti = json["value"];
+      console.log(teksti);
+
+      //Päivitä lista
+      let haettava_id = "vitsi" + vitsinumero.toString();
+      // console.log(haettava_id);
+
+      let elementti = document.querySelector("#" + haettava_id);
+      elementti.innerText = teksti;
+    }
+
+    for (let i = 1; i<4; i++) {
+      hae_vitsi(i);
+    }
+</script>
+
+</body>
+</html>
